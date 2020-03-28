@@ -56,5 +56,7 @@ public class Main {
 
         System.out.println(me.car);
         System.out.println(dog);
+
+        Device d = new Phone("Samsung","S10")
     }
 }
