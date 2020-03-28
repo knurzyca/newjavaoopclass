@@ -14,6 +14,7 @@ public class Human extends Animal{
     private Double salary;
 
     public Human() {
+
         super("homo sapiens");
     }
 
@@ -28,6 +29,8 @@ public class Human extends Animal{
     public void eat() throws Exception {
         throw new Exception("don't do this freak");
     }
-
+    public String toString() {
+        return firstName;
+    }
 
 }
