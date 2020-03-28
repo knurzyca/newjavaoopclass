@@ -27,7 +27,7 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
 
-        Car dirtyOne = new Car("fiat", "bravo", 2014, 1.6);
+        Car dirtyOne = new Car("mini", "cooper", 2019, 1.6);
         dirtyOne.plates = "PO G0";
         me.car = dirtyOne;
         System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
