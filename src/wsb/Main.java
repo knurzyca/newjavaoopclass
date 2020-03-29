@@ -35,10 +35,12 @@ public class Main {
         System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
 
         Car car = new DieselCar("Jeep", "Renegade");
+        car.plates = "C0 RONA";
         System.out.println(car);
 
         Car car1 = new ElectricCar("Tesla", "X");
         System.out.println(car1);
+        car1.plates = "EL ZA";
 
       //  System.out.println(me instanceof Animal);
       //  System.out.println(me instanceof Human);
