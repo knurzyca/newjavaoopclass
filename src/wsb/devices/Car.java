@@ -1,6 +1,6 @@
 package wsb.devices;
 
-import wsb.Human;
+import wsb.creatures.Human;
 
 public class Car extends Device {
     public final Integer yearOfProduction;

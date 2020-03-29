@@ -1,50 +1,56 @@
 package wsb;
 
+import wsb.creatures.Animal;
+import wsb.creatures.FarmAnimal;
+import wsb.creatures.Pet
+
+import wsb.creatures.Human;
 import wsb.devices.Car;
-import wsb.devices.Device;
+import wsb.devices.DieselCar;
+import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Animal dog = new Animal("dog");
+        Animal dog = new Animal("dog", 5.2, "Szynek");
         dog.name = "Szynek";
 
-        Phone iphone = new Phone("Apple", "6s", 4.7);
+        Phone szajsung = new Phone("Samsung", "10", 5.0);
 
         Human me = new Human();
         me.firstName = "Kasia";
         me.lastName = "Pogo";
         me.pet = dog;
-        me.mobile = iphone;
+        me.mobile = szajsung;
 
         me.pet.feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
+
 
         Car dirtyOne = new Car("mini", "cooper", 2019, 1.6);
         dirtyOne.plates = "PO G0";
         me.car = dirtyOne;
         System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
 
-        System.out.println(me instanceof Animal);
-        System.out.println(me instanceof Human);
-        System.out.println(me instanceof Object);
+        Car car = new DieselCar("Jeep", "Renegade");
+        System.out.println(car);
+
+        Car car1 = new ElectricCar("Tesla", "X");
+        System.out.println(car1);
+
+      //  System.out.println(me instanceof Animal);
+      //  System.out.println(me instanceof Human);
+      //  System.out.println(me instanceof Object);
 
         me.feed();
         me.pet.feed();
 
-        iphone.turnOn();
+        szajsung.turnOn();
         dirtyOne.turnOn();
 
-        iphone.sell();
-        me.pet.sell();
-
+        szajsung.sell();
 
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
@@ -54,6 +60,7 @@ public class Main {
        // System.out.println(me.car = knur.car);
 
         System.out.println(me.car);
+        System.out.println(me);
        // System.out.println(dog);
 
         //Device d = new Phone("Samsung","S10")
@@ -66,5 +73,13 @@ public class Main {
         System.out.println("After purchase I have" +me.cash + "PLN");
         System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" carBuyer.cash + "PLN" );
 
+
+        //        me.pet.eat(); // that will not work
+        FarmAnimal chicken = new FarmAnimal("Piggy");
+        chicken.beEaten();
+
+
+        Human farmer = new Human();
+        farmer.firstName = "Farmoslaw";
     }
 }

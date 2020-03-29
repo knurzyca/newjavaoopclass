@@ -1,19 +1,24 @@
-package wsb;
+package wsb.creatures;
+
+
+import wsb.Edible;
 
 import java.io.File;
 
-public class Animal implements Soldable, Edible {
-    final String species;
-    private Double weight;
+public class Animal implements Edible, Feedable {
+    final String species; //Fields store data
+    public Double weight;
     public String name;
     File pic;
 
-    private static Double NEW_DOG_WEIGHT = 4.0;
+    private static Double NEW_DOG_WEIGHT = 5.4;
     private static Double NEW_LION_WEIGHT = 39.2;
-    private static Double NEW_OTHER_ANIMAL_WEIGHT = 5.3;
+    private static Double NEW_PUG_WEIGHT = 4.3;
+
+    private static Double DEFAULT_FEED_WEIGHT = 1.0;
 
     public Animal(String species) {
-        System.out.println("we created new Animal");
+        System.out.println("there is a new Animal");
         this.species = species;
 
         switch (species) {
@@ -26,21 +31,22 @@ public class Animal implements Soldable, Edible {
                 break;
             }
             default: {
-                weight = NEW_OTHER_ANIMAL_WEIGHT;
+                weight = NEW_PUG_WEIGHT;
                 break;
             }
         }
     }
 
-
-    void feed() {
-        if (weight == 0) {
-            System.out.println("too late, " + name + " is dead");
-        } else {
-            ++weight;
-            System.out.println(name + " says thx for food");
-        }
+    public void feed(){
+    if (weight === 0){
+        System.out.println("ooh it's too late to feed" + name + "- it's already dead");
     }
+    else {
+        ++weight;
+        System.out.println(name + "has been feeded YUMMMMMM");
+    }
+    }
+}
 
     void takeForAWalk() {
         if(weight == 0.0){
@@ -61,6 +67,9 @@ public class Animal implements Soldable, Edible {
         return weight;
     }
 
+    protected void kill() {
+        System.out.println("goneeeeeee - see u in heaven");
+        this.weight = 0.0;
 
     @Override
     public void sell() throws Exception {
@@ -68,7 +77,7 @@ public class Animal implements Soldable, Edible {
     }
 
     @Override
-    public void eat() throws Exception {
+    public void beEaten() throws Exception {
         System.out.println("that was yuammy");
     }
 }

@@ -12,4 +12,13 @@ public class Phone extends Device {
     public void turnOn() {
         System.out.println("phone is turned on");
     }
+
+    public void sell(){System.out.println("phone is on");}
+
+    public void installAnApp(String name){
+        installAnApp(name, 0.0);
+    }
+    public void installAnApp(String name, Double version){
+        System.out.println();
+    }
 }
