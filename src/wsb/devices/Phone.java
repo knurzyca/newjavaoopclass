@@ -1,5 +1,7 @@
 package wsb.devices;
 
+import wsb.creatures.Human;
+
 public class Phone extends Device {
     final Double screenSize;
 
@@ -20,5 +22,10 @@ public class Phone extends Device {
     }
     public void installAnApp(String name, Double version){
         System.out.println();
+    }
+
+    @Override
+    public void sell(Human buyer, Human seller, Double price) throws Exception {
+
     }
 }

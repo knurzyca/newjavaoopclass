@@ -1,6 +1,6 @@
 package wsb.creatures;
 
-public interface Feedable <foodWeight> extends Animal {
+public interface Feedable {
    public void feed();
    public void feed(Double foodWeight);
 
@@ -8,4 +8,3 @@ public interface Feedable <foodWeight> extends Animal {
     //void feed(foodWeight)  throws Exception; {
 
     }
-}

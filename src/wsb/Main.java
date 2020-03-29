@@ -2,7 +2,7 @@ package wsb;
 
 import wsb.creatures.Animal;
 import wsb.creatures.FarmAnimal;
-import wsb.creatures.Pet
+import wsb.creatures.Pet;
 
 import wsb.creatures.Human;
 import wsb.devices.Car;
@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Animal dog = new Animal("dog", 5.2, "Szynek");
+        Animal dog = new Animal("dog");
         dog.name = "Szynek";
 
         Phone szajsung = new Phone("Samsung", "10", 5.0);
@@ -25,11 +25,11 @@ public class Main {
         me.pet = dog;
         me.mobile = szajsung;
 
-        me.pet.feed();
-        me.pet.takeForAWalk();
+       // me.pet.feed();
+      //  me.pet.takeForAWalk();
 
 
-        Car dirtyOne = new Car("mini", "cooper", 2019, 1.6);
+        Car dirtyOne = new DieselCar("mini", "cooper");
         dirtyOne.plates = "PO G0";
         me.car = dirtyOne;
         System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
@@ -57,12 +57,11 @@ public class Main {
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
         knur.lastName = "Knurski";
-        knur.car = dirtyOne;
-
+        knur.car = new DieselCar("Tesla", "x");
        // System.out.println(me.car = knur.car);
 
         System.out.println(me.car);
-        System.out.println(me);
+        System.out.println(knur.car);
        // System.out.println(dog);
 
         //Device d = new Phone("Samsung","S10")
@@ -73,7 +72,7 @@ public class Main {
 
         me.car.sell(carBuyer, me, 123.0);
         System.out.println("After purchase I have" +me.cash + "PLN");
-        System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" carBuyer.cash + "PLN" );
+        System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" + carBuyer.cash + "PLN" );
 
 
         //        me.pet.eat(); // that will not work

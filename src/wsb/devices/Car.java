@@ -2,7 +2,7 @@ package wsb.devices;
 
 import wsb.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public final Integer yearOfProduction;
     public final Double sizeOfAnEngine;
     public String plates;
@@ -14,13 +14,17 @@ public class Car extends Device {
 
     }
 
+
+    abstract public void refuel();
+
+
     @Override
     public void turnOn() {
         System.out.println("car is ready to go");
     }
 
     public String toString(){
-        return this.producer " " + this.plates;
+        return this.producer + " " + this.plates;
     }
 
     @Override
@@ -33,7 +37,7 @@ public class Car extends Device {
             System.out.println(seller.firstName + "is selling a car" + this.model + "to" + buyer.firstName);
         }
         else {
-            throw new Exception("sorry, your funds are inefficient - please provide more cash to proceed with your purchase")
+            throw new Exception("sorry, your funds are inefficient - please provide more cash to proceed with your purchase");
         }
     }
 }

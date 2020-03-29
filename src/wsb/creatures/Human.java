@@ -4,6 +4,7 @@ import wsb.devices.Car;
 import wsb.devices.Phone;
 
 public class Human extends Animal {
+    private static final Double DEFAULT_FEED_WEIGHT = 1.0;
     public String firstName;
     public String lastName;
     public Animal pet;
@@ -38,7 +39,7 @@ public class Human extends Animal {
     }
 
     public void startFeeding(Feedable feedable){
-        System.out.println("Now")
+        System.out.println("Now");
     }
 
 }
