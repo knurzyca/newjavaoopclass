@@ -9,6 +9,7 @@ public class Human extends Animal{
     public Animal pet;
     public Phone mobile;
     public Car car;
+    public Double cash;
 
     protected String phoneNumber;
     private Double salary;
@@ -17,6 +18,7 @@ public class Human extends Animal{
 
         super("homo sapiens");
     }
+
 
     public Double getSalary() {
         return salary;
@@ -29,6 +31,7 @@ public class Human extends Animal{
     public void eat() throws Exception {
         throw new Exception("don't do this freak");
     }
+
     public String toString() {
         return firstName;
     }

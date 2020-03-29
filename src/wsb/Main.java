@@ -51,12 +51,20 @@ public class Main {
         knur.lastName = "Knurski";
         knur.car = dirtyOne;
 
-        System.out.println(me.car = knur.car);
-
+       // System.out.println(me.car = knur.car);
 
         System.out.println(me.car);
-        System.out.println(dog);
+       // System.out.println(dog);
 
-        Device d = new Phone("Samsung","S10")
+        //Device d = new Phone("Samsung","S10")
+
+        Human carBuyer = new Human();
+        carBuyer.firstName = "Janusz" ;
+        carBuyer.lastName = "Nosacz" ;
+
+        me.car.sell(carBuyer, me, 123.0);
+        System.out.println("After purchase I have" +me.cash + "PLN");
+        System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" carBuyer.cash + "PLN" );
+
     }
 }
