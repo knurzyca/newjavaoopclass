@@ -10,6 +10,8 @@ import wsb.devices.DieselCar;
 import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -75,12 +77,36 @@ public class Main {
         System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" + carBuyer.cash + "PLN" );
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
         //        me.pet.eat(); // that will not work
-        FarmAnimal chicken = new FarmAnimal("Piggy");
-        chicken.beEaten();
+        FarmAnimal pork = new FarmAnimal("Piggy");
+        pork.beEaten();
 
 
         Human farmer = new Human();
         farmer.firstName = "Farmoslaw";
+
+        Scanner consoleInput = new Scanner(System.in); //Creating scanner
+        System.out.println("Enter species");
+
+        String species = consoleInput.nextLine(); //read user consoleInput
+        System.out.println("species are " + species);
+
+        Animal animal = new FarmAnimal(species);
+        System.out.println(animal);
+
+        System.out.println("Name the animals!");
+        String [] names = new String[3];
+        for (int i=0; i<names.length; i++){
+            names[i] = consoleInput.nextLine();
+        }
+        System.out.println(names[0]);
+        System.out.println(names[1]);
+        System.out.println(names[2]);
+
+
     }
 }
