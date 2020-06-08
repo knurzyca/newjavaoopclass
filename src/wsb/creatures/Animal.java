@@ -3,7 +3,7 @@ package wsb.creatures;
 import java.io.File;
 
 
-public class Animal implements Feedable, Comparable<Animal> {
+public class Animal {
     final String species; //Fields store data
     public Double weight;
     public String name;
@@ -11,14 +11,14 @@ public class Animal implements Feedable, Comparable<Animal> {
 
     private static Double NEW_DOG_WEIGHT = 5.4;
     private static Double NEW_LION_WEIGHT = 39.2;
-    private static Double NEW_PUG_WEIGHT = 4.3;
+    private static Double NEW_CAT_WEIGHT = 4.3;
 
     private static Double DEFAULT_FEED_WEIGHT = 1.0;
 
     public Animal(String species) {
-        System.out.println("there is a new Animal");
         this.species = species;
 
+        System.out.println(" Hurray, there is a new animal in the family! ");
         switch (species) {
             case "dog": {
                 weight = NEW_DOG_WEIGHT;
@@ -28,8 +28,12 @@ public class Animal implements Feedable, Comparable<Animal> {
                 weight = NEW_LION_WEIGHT;
                 break;
             }
+            case "cat": {
+                weight = NEW_CAT_WEIGHT;
+                break;
+            }
             default: {
-                weight = NEW_PUG_WEIGHT;
+                weight = NEW_CAT_WEIGHT;
                 break;
             }
         }
@@ -44,40 +48,35 @@ public class Animal implements Feedable, Comparable<Animal> {
         }
     }
 
-    @Override
-    public void feed(Double foodWeight) {
-    }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (weight == 0.0) {
-            System.out.println("you can't walk the street with dead animal you freak");
-        } else if (weight > 3.0) {
+            System.out.println("Your Animal is dead - you can't walk it.");
+        } else if (weight > 4.0) {
             --weight;
             System.out.println(name + " says thx for a walk");
         } else if (weight > 1.0) {
             --weight;
-            System.out.println(name + " says thx for a walk but I'm hungry");
+            System.out.println(name + " is hungry");
         } else {
             weight = 0.0;
-            System.out.println(name + " died");
+            System.out.println(name + " starved to death");
         }
     }
 
-    Double getWeight() {
+  /*  Double getWeight() {
         return weight;
     }
 
+   */
+
     protected void kill() {
-        System.out.println(" Animal is goneeeeeee - see u in heaven");
+        System.out.println(" Animal died");
         this.weight = 0.0;
 
     }
 
-    public String toString() {return "Helllo, it's your Animal";
+    public String toString() {return "Hello, it's your " +species +name;
     }
 
-    @Override
-    public int compareTo(Animal o){
-        return this.species.compareTo(o.species);
-    }
 }
