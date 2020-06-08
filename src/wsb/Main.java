@@ -28,10 +28,10 @@ public class Main {
         me.lastName = "Pogo";
         me.pet = dog;
         me.mobile = szajsung;
-       // System.out.println(dog);
-      //  me.pet.feed();
+        System.out.println(dog);
+        me.pet.feed();
        // me.pet.takeForAWalk();
-        me.setCar(new ElectricCar("X", "Tesla",2020,2.0));
+       // me.setCar(new ElectricCar("X", "Tesla",2020,2.0));
 
         //task Salary
         me.setSalary(10000.0);
@@ -41,32 +41,36 @@ public class Main {
         knur.firstName = "Knuroslaw";
         knur.lastName = "Knurski";
         knur.pet = cat;
-        knur.pet = me.pet;
+        //knur.pet = me.pet;
         knur.mobile = knurofon;
-      //  System.out.println(cat);
+
+        knur.pet.feed();
+        System.out.println(cat);
 
         //task3 Salry
         knur.setSalary(5000.0);
 
+
         //task2 Create new car in Main and assign it to human that you should already have.
-        Car knurmobil = new Car ("Ford", "Focus", 2018, 3.6);
+
+       /* Car knurmobil = new Car ("Ford", "Focus", 2018, 3.6);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
         //System.out.println(knurmobil);
         System.out.println("Knur has a car " +knur.car.model);
         System.out.println(" with plates " + knur.car.plates);
 
-       /* Car electro = new ElectricCar("Tesla", "X", 2020,6.6.);
-        celectro.plates = "EL ZA";
+        Car electro = new ElectricCar("Tesla", "X", 2020,6.6.);
+        electro.plates = "EL ZA";
         System.out.println("We have Tesla with plates " +electro.plates);
 
-        */
+
 
        Car cityCar = new Car("cooper", "mini", 2016, 2.2);
         cityCar.plates = "PO G0";
         me.car = cityCar;
         System.out.println( " Kasia Pogo drives " +cityCar.producer);
         System.out.println(" with plates "+ cityCar.plates);
-
+*/
     }
 }

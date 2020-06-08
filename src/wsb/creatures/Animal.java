@@ -3,7 +3,7 @@ package wsb.creatures;
 import java.io.File;
 
 
-public class Animal {
+public class Animal implements Feedable {
         final String species; //Fields store data
         public Double weight; // task 1.1 Add field final String species and private Double weight in Animal
         public String name;
@@ -12,6 +12,7 @@ public class Animal {
         private static Double NEW_DOG_WEIGHT = 5.4;
         private static Double NEW_LION_WEIGHT = 39.2;
         private static Double NEW_CAT_WEIGHT = 4.3;
+        private static Double NEW_OTHER_WEIGHT=100.0;
 
         private static Double DEFAULT_FEED_WEIGHT = 1.0;
 
@@ -19,7 +20,7 @@ public class Animal {
             this.species = species;
             getWeight();
 
-           // System.out.println(" Hurray, there is a new animal in the family! ");
+           System.out.println(" Hurray, there is a new animal in the family! ");
             switch (species) {
                 case "dog": {
                     weight = NEW_DOG_WEIGHT;
@@ -34,13 +35,13 @@ public class Animal {
                     break;
                 }
                 default: {
-                    weight = NEW_CAT_WEIGHT;
+                    weight = NEW_OTHER_WEIGHT;
                     break;
                 }
             }
         }
 
-   /* private void getWeight() {
+  /* private void getWeight() {
 
         if (this.species.equals("dog"))
             weight = 5.4;
@@ -50,19 +51,22 @@ public class Animal {
             weight = 0.0;
     }
 
-    */
+   */
 
     //task 1.4 add void feed()
-       /* public void feed() {
+    public void feed() {
+        feed(DEFAULT_FEED_WEIGHT);
+    }
+        public void feed(Double food) {
             if (weight == 0) {
-              //  System.out.println(" sooh it's too late to feed" + name + "- it's already dead");
+                System.out.println(" sooh it's too late to feed" + name + "- it's already dead");
             } else {
-                ++weight;
-              //  System.out.println(name + " has been feeded YUMMMMMM");
+                weight += food;
+                System.out.println(name + " has been feeded YUMMMMMM");
             }
         }
 
-        */
+
     Double getWeight() {
         return weight;}
 
@@ -84,6 +88,8 @@ public class Animal {
                 System.out.println(name + " starved to death");
             }
         }
+        Double getWeight() {
+        return weight;}
 
         */
 
