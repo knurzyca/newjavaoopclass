@@ -49,7 +49,7 @@ public class Main {
         //  System.out.println(me instanceof Human);
         //  System.out.println(me instanceof Object);
 
-       me.feed();
+      // me.feed();
         me.pet.feed();
 
    //     szajsung.turnOn();
@@ -103,17 +103,17 @@ public class Main {
         //Animal animal = new FarmAnimal(species);
        // System.out.println(animal);
 
-        //System.out.println("Name the animals!");
-        //String [] names = new String[3];
-        //for (int i=0; i<names.length; i++){
-        //    names[i] = consoleInput.nextLine();
-        //me.farm[i] = new FarmAnimal (species "cow");
+       /* System.out.println("Name the animals!");
+        String [] names = new String[3];
+        for (int i=0; i<names.length; i++){
+           names[i] = consoleInput.nextLine();
+        me.farm[i] = new FarmAnimal (species "cow");
 
-        //   for (int i=0; i<me.farm.length; i++) {
-        // System.out.println(farm[0]);
-        // System.out.println(farm[1]);
-        //  System.out.println(farm[2]);
-
+          for (int i=0; i<me.farm.length; i++) {
+         System.out.println(farm[0]);
+         System.out.println(farm[1]);
+       System.out.println(farm[2]);
+*/
         me.farm[0] = new Pet("doggo");
         me.farm[1] = new FarmAnimal("cow");
         me.farm[2] = new Human(0);

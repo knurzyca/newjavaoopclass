@@ -48,7 +48,7 @@ public class Human extends Animal {
 
    // public String toString() { return firstName; }
     public void feed() {
-        System.out.println("Human can use knife and fork - don't need to be feeeded");
+        System.out.println("Human can use knife and fork - don't need to be feeded");
         super.feed(DEFAULT_FEED_WEIGHT);
     }
 /*

@@ -6,9 +6,11 @@ public class DieselCar extends Car {
     }
     @Override
     public void refuel() {
-        System.out.println("Refueled with DIESEL");
+       System.out.println("Refueled with DIESEL");
     }
-    public String toString(){
+   public String toString(){
         return "Not fast, but efficent";
     }
+
+
 }

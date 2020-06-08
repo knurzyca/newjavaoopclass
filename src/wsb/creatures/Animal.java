@@ -68,7 +68,7 @@ public class Animal implements Feedable, Comparable<Animal> {
     }
 
     protected void kill() {
-        System.out.println("goneeeeeee - see u in heaven");
+        System.out.println(" Animal is goneeeeeee - see u in heaven");
         this.weight = 0.0;
 
     }
