@@ -1,6 +1,7 @@
 package wsb.creatures;
 
 import wsb.devices.Car;
+import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
 public class Human extends Animal {
@@ -18,6 +19,7 @@ public class Human extends Animal {
     private static int DEFAULT_FARM_SIZE = 3;
 
     protected String phoneNumber;
+
     public Double cash = 300.0;
     private Double salary;
 
@@ -46,7 +48,13 @@ public class Human extends Animal {
         throw new Exception("don't do this ");
     }
 
-   // public String toString() { return firstName; }
+    public void setSalary(double v) {
+    }
+
+    public void setCar(ElectricCar electricCar) {
+    }
+
+    // public String toString() { return firstName; }
 /*
     public void feed() {
         System.out.println("Human can use knife and fork - don't need to be feeded");

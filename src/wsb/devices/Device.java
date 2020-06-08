@@ -1,8 +1,8 @@
 package wsb.devices;
 
-import wsb.Soldable;
+import wsb.Saleable;
 
-public abstract class Device implements Soldable {
+public abstract class Device implements Saleable {
         final public String producer;
         final public String model;
         int value;

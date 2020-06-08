@@ -17,8 +17,9 @@ public class Animal {
 
         public Animal(String species) {
             this.species = species;
+            getWeight();
 
-            System.out.println(" Hurray, there is a new animal in the family! ");
+           // System.out.println(" Hurray, there is a new animal in the family! ");
             switch (species) {
                 case "dog": {
                     weight = NEW_DOG_WEIGHT;
@@ -38,22 +39,38 @@ public class Animal {
                 }
             }
         }
-        //task 1.4 add void feed()
-        public void feed() {
+
+   /* private void getWeight() {
+
+        if (this.species.equals("dog"))
+            weight = 5.4;
+        else if (this.species.equals("cat"))
+            weight = 4.3;
+        else
+            weight = 0.0;
+    }
+
+    */
+
+    //task 1.4 add void feed()
+       /* public void feed() {
             if (weight == 0) {
-                System.out.println(" sooh it's too late to feed" + name + "- it's already dead");
+              //  System.out.println(" sooh it's too late to feed" + name + "- it's already dead");
             } else {
                 ++weight;
-                System.out.println(name + " has been feeded YUMMMMMM");
+              //  System.out.println(name + " has been feeded YUMMMMMM");
             }
         }
 
+        */
+    Double getWeight() {
+        return weight;}
 
         // task 1.4. add void takeForAWalk()
         // When you feed an animal it should gain weight, when you take it for a walk it should loose weight.
         // If weight will drop to zero your animal is dead.
         // You should see some pasive-agresive message if you will try to feed or take for a walk dead animal.
-        public void takeForAWalk() {
+       /* public void takeForAWalk() {
             if (weight == 0.0) {
                 System.out.println("Your Animal is dead - you can't walk it.");
             } else if (weight > 4.0) {
@@ -68,11 +85,7 @@ public class Animal {
             }
         }
 
-      /*  Double getWeight() {
-            return weight;
-        }
-
-       */
+        */
 
         protected void kill() {
             System.out.println(" Animal died");

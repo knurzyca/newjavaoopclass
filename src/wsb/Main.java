@@ -3,6 +3,7 @@ package wsb;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
 import wsb.devices.Car;
+import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
 
@@ -27,9 +28,14 @@ public class Main {
         me.lastName = "Pogo";
         me.pet = dog;
         me.mobile = szajsung;
-        System.out.println(dog);
-        me.pet.feed();
-        me.pet.takeForAWalk();
+       // System.out.println(dog);
+      //  me.pet.feed();
+       // me.pet.takeForAWalk();
+        me.setCar(new ElectricCar("X", "Tesla",2020,2.0));
+
+        //task Salary
+        me.setSalary(10000.0);
+
 
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
@@ -37,7 +43,10 @@ public class Main {
         knur.pet = cat;
         knur.pet = me.pet;
         knur.mobile = knurofon;
-        System.out.println(cat);
+      //  System.out.println(cat);
+
+        //task3 Salry
+        knur.setSalary(5000.0);
 
         //task2 Create new car in Main and assign it to human that you should already have.
         Car knurmobil = new Car ("Ford", "Focus", 2018, 3.6);
@@ -47,11 +56,12 @@ public class Main {
         System.out.println("Knur has a car " +knur.car.model);
         System.out.println(" with plates " + knur.car.plates);
 
-       /*Car car1 = new ElectricCar("Tesla", "X");
-        System.out.println(car1);
-        car1.plates = "EL ZA";
+       /* Car electro = new ElectricCar("Tesla", "X", 2020,6.6.);
+        celectro.plates = "EL ZA";
+        System.out.println("We have Tesla with plates " +electro.plates);
 
-       */
+        */
+
        Car cityCar = new Car("cooper", "mini", 2016, 2.2);
         cityCar.plates = "PO G0";
         me.car = cityCar;
