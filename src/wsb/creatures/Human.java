@@ -7,7 +7,7 @@ public class Human extends Animal {
     private static final Double DEFAULT_FEED_WEIGHT = 1.0;
     public String firstName;
     public String lastName;
-    public Animal pet;
+    public Animal pet; //task 1.1
 
     public Animal [] farm;
     //public FarmAnimal[] farm;
