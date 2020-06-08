@@ -41,10 +41,10 @@ public class Animal {
         //task 1.4 add void feed()
         public void feed() {
             if (weight == 0) {
-                System.out.println("ooh it's too late to feed" + name + "- it's already dead");
+                System.out.println(" sooh it's too late to feed" + name + "- it's already dead");
             } else {
                 ++weight;
-                System.out.println(name + "has been feeded YUMMMMMM");
+                System.out.println(name + " has been feeded YUMMMMMM");
             }
         }
 
@@ -80,7 +80,7 @@ public class Animal {
 
         }
 
-        public String toString() {return "Hello, it's your " +species +name;
+        public String toString() {return " Hello, it's your " +species +name;
         }
 
 }
