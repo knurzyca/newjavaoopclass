@@ -1,21 +1,14 @@
 package wsb;
 
 import wsb.creatures.Animal;
-import wsb.creatures.FarmAnimal;
-import wsb.creatures.Pet;
 import wsb.creatures.Human;
-import wsb.devices.Phone;
-/*
 import wsb.devices.Car;
-import wsb.devices.DieselCar;
-import wsb.devices.ElectricCar;
+import wsb.devices.Phone;
 
- */
-
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
+
+
 
     public static void main(String[] args) throws Exception {
         //lesson1
@@ -45,6 +38,25 @@ public class Main {
         knur.pet = me.pet;
         knur.mobile = knurofon;
         System.out.println(cat);
+
+        //task2 Create new car in Main and assign it to human that you should already have.
+        Car knurmobil = new Car ("Ford", "Focus", 2018, 3.6);
+        knurmobil.plates = "WE 1234A";
+        knur.car = knurmobil;
+        //System.out.println(knurmobil);
+        System.out.println("Knur has a car " +knur.car.model);
+        System.out.println(" with plates " + knur.car.plates);
+
+       /*Car car1 = new ElectricCar("Tesla", "X");
+        System.out.println(car1);
+        car1.plates = "EL ZA";
+
+       */
+       Car cityCar = new Car("cooper", "mini", 2016, 2.2);
+        cityCar.plates = "PO G0";
+        me.car = cityCar;
+        System.out.println( " Kasia Pogo drives " +cityCar.producer);
+        System.out.println(" with plates "+ cityCar.plates);
 
     }
 }
