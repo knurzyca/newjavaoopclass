@@ -31,7 +31,7 @@ public class Main {
         // me.pet.feed();
         //  me.pet.takeForAWalk();
 
-
+/*
         Car dirtyOne = new DieselCar("mini", "cooper");
         dirtyOne.plates = "PO G0";
         me.car = dirtyOne;
@@ -44,18 +44,18 @@ public class Main {
         Car car1 = new ElectricCar("Tesla", "X");
         System.out.println(car1);
         car1.plates = "EL ZA";
-
+*/
         //  System.out.println(me instanceof Animal);
         //  System.out.println(me instanceof Human);
         //  System.out.println(me instanceof Object);
 
-       // me.feed();
+       me.feed();
         me.pet.feed();
 
-        szajsung.turnOn();
-        dirtyOne.turnOn();
+   //     szajsung.turnOn();
+     //   dirtyOne.turnOn();
 
-        szajsung.sell();
+     //   szajsung.sell();
 
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
@@ -63,20 +63,20 @@ public class Main {
         knur.car = new DieselCar("Tesla", "x");
          System.out.println(me.car = knur.car);
 
-        System.out.println(me.car);
-        System.out.println(knur.car);
-        // System.out.println(dog);
+     //   System.out.println(me.car);
+     //   System.out.println(knur.car);
+        System.out.println(dog);
 
         //Device d = new Phone("Samsung","S10")
 
         Human carBuyer = new Human();
         carBuyer.firstName = "Janusz";
         carBuyer.lastName = "Nosacz";
-
+/*
         me.car.sell(carBuyer, me, 123.0);
         System.out.println("After purchase I have" + me.cash + "PLN");
         System.out.println("The buyer named" + carBuyer.firstName + " paid me and still has" + carBuyer.cash + "PLN");
-
+*/
 
         //        me.pet.eat(); // that will not work
         FarmAnimal pork = new FarmAnimal("Piggy");
@@ -87,14 +87,14 @@ public class Main {
         farmer.firstName = "Farmoslaw";
 
         Scanner consoleInput = new Scanner(System.in); //Creating scanner
-        String[] names = {"Adrian", "Boruta", "Szynek"};
+  /*      String[] names = {"Adrian", "Boruta", "Szynek"};
         Integer[] numbers = {123, 3, 234, 777};
 
         Arrays.sort(names);
         System.out.println(Arrays.toString(names));
         Arrays.sort(numbers);
         System.out.println(Arrays.toString(numbers));
-
+*/
         System.out.println("Enter species");
 
         String species = consoleInput.nextLine(); //read user consoleInput
@@ -119,11 +119,11 @@ public class Main {
         me.farm[2] = new Human(0);
 
         Arrays.sort(me.farm);
-
+/*
         Integer[] numbers2 = {1, 2, 3, 44};
         Arrays.sort(numbers2);
         System.out.println(Arrays.toString(numbers2));
-
+*/
     }
 
 
