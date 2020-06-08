@@ -30,6 +30,7 @@ public class Human extends Animal {
     public Human() {
         super("homo sapiens");
         farm = new FarmAnimal[DEFAULT_FARM_SIZE];
+       // garage = new Car[DEFAULT_GARAGE_SIZE]
     }
 
 
@@ -50,9 +51,14 @@ public class Human extends Animal {
         System.out.println("Human can use knife and fork - don't need to be feeeded");
         super.feed(DEFAULT_FEED_WEIGHT);
     }
-
-    public void startFeeding(Feedable feedable){
-        System.out.println("Now");
-    }
+/*
+    public Double valueofCars(){
+        Double value = 0.0;
+        for (Car car :garage){
+            if (car == null){
+                value +=car.value;
+            }
+        }
+    } */
 
 }

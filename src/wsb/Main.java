@@ -49,7 +49,7 @@ public class Main {
         //  System.out.println(me instanceof Human);
         //  System.out.println(me instanceof Object);
 
-        me.feed();
+       // me.feed();
         me.pet.feed();
 
         szajsung.turnOn();
@@ -61,7 +61,7 @@ public class Main {
         knur.firstName = "Knuroslaw";
         knur.lastName = "Knurski";
         knur.car = new DieselCar("Tesla", "x");
-        // System.out.println(me.car = knur.car);
+         System.out.println(me.car = knur.car);
 
         System.out.println(me.car);
         System.out.println(knur.car);
@@ -75,11 +75,7 @@ public class Main {
 
         me.car.sell(carBuyer, me, 123.0);
         System.out.println("After purchase I have" + me.cash + "PLN");
-        System.out.println("The buyer named" + carBuyer.firstName + "paid me and still has" + carBuyer.cash + "PLN");
-
-
-        System.out.println();
-        System.out.println();
+        System.out.println("The buyer named" + carBuyer.firstName + " paid me and still has" + carBuyer.cash + "PLN");
 
 
         //        me.pet.eat(); // that will not work
@@ -104,10 +100,10 @@ public class Main {
         String species = consoleInput.nextLine(); //read user consoleInput
         System.out.println("species are " + species);
 
-        Animal animal = new FarmAnimal(species);
-        System.out.println(animal);
+        //Animal animal = new FarmAnimal(species);
+       // System.out.println(animal);
 
-        System.out.println("Name the animals!");
+        //System.out.println("Name the animals!");
         //String [] names = new String[3];
         //for (int i=0; i<names.length; i++){
         //    names[i] = consoleInput.nextLine();
