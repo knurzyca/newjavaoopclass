@@ -74,7 +74,7 @@ public class Animal implements Feedable {
         // When you feed an animal it should gain weight, when you take it for a walk it should loose weight.
         // If weight will drop to zero your animal is dead.
         // You should see some pasive-agresive message if you will try to feed or take for a walk dead animal.
-       /* public void takeForAWalk() {
+      public void takeForAWalk() {
             if (weight == 0.0) {
                 System.out.println("Your Animal is dead - you can't walk it.");
             } else if (weight > 4.0) {
@@ -88,10 +88,7 @@ public class Animal implements Feedable {
                 System.out.println(name + " starved to death");
             }
         }
-        Double getWeight() {
-        return weight;}
 
-        */
 
         protected void kill() {
             System.out.println(" Animal died");

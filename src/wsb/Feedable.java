@@ -1,5 +1,8 @@
 package wsb;
 
 public interface Feedable {
-    void beEaten() throws Exception;
+
+    void feed();
+
+    void feed(Double foodWeight);
 }

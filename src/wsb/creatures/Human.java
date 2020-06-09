@@ -55,13 +55,12 @@ public class Human extends Animal {
     }
 
     // public String toString() { return firstName; }
-/*
+
     public void feed() {
         System.out.println("Human can use knife and fork - don't need to be feeded");
         super.feed(DEFAULT_FEED_WEIGHT);
     }
-/*
-    public Double valueofCars(){
+    /*public Double valueofCars(){
         Double value = 0.0;
         for (Car car :garage){
             if (car == null){

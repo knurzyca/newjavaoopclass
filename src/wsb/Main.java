@@ -30,6 +30,9 @@ public class Main {
         me.mobile = szajsung;
         System.out.println(dog);
         me.pet.feed();
+        me.pet.feed();
+        me.pet.feed();
+        me.pet.feed();
        // me.pet.takeForAWalk();
        // me.setCar(new ElectricCar("X", "Tesla",2020,2.0));
 
