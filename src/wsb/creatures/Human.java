@@ -54,11 +54,13 @@ public class Human extends Animal {
     public void setCar(ElectricCar electricCar) {
     }
 
-    // public String toString() { return firstName; }
-
     public void feed() {
         System.out.println("Human can use knife and fork - don't need to be feeded");
         super.feed(DEFAULT_FEED_WEIGHT);
+    }
+
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
     /*public Double valueofCars(){
         Double value = 0.0;

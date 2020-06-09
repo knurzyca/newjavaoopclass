@@ -3,6 +3,8 @@ package wsb.devices;
 // import wsb.Soldable;
 // import wsb.creatures.Human;
 
+import wsb.creatures.Human;
+
 public class Car {
     public String model;
     public String producer;
@@ -20,7 +22,11 @@ public class Car {
 
 
     }
+    //task buy sell
+    public void sell(Human carBuyer, Human me, double v) throws Exception{
+            throw new Exception("Do you really wanna sell it? ");
+    }
 
 
-   // public void refuel();
+    // public void refuel();
 }
