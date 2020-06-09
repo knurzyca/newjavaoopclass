@@ -1,6 +1,7 @@
 package wsb.devices;
 
 import wsb.Saleable;
+import wsb.creatures.Human;
 
 public abstract class Device implements Saleable {
         final public String producer;
@@ -19,11 +20,16 @@ public abstract class Device implements Saleable {
         return this.model;
     }
 
-    public void sell(){
+    @Override public void sell(){
         System.out.println("already sold");
     }
 
     public int getValue() {
         return this.value;
+    }
+
+    @Override
+    public void sell(Human buyer, Human seller, Double price) throws Exception {
+
     }
 }

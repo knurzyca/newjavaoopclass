@@ -22,9 +22,17 @@ public class Car {
 
 
     }
-    //task buy sell
-    public void sell(Human carBuyer, Human me, double v) throws Exception{
-            throw new Exception("Do you really wanna sell it? ");
+    //task buy sell - "me" as a seller
+    public void sell(Human carBuyer, Human me, double price) throws Exception{
+        if (carBuyer.cash >= price) {
+            carBuyer.car = this;
+            carBuyer.cash -= price;
+            me.car = null;
+            me.cash += price;
+            System.out.println(me.firstName + " sell a car (" + this.model + ") to " + carBuyer + " for " + price);
+        } else {
+            throw new Exception("sorry, your funds are not enough");
+        }
     }
 
 
