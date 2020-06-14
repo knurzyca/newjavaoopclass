@@ -2,10 +2,13 @@ package wsb;
 
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
+import wsb.database.Connector;
 import wsb.devices.Car;
 import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
+import wsb.database.Connector;
 
+import java.util.*;
 
 public class Main {
 
@@ -58,7 +61,7 @@ public class Main {
 
         //task2 Create new car in Main and assign it to human that you should already have.
 
-        Car knurmobil = new Car ("Ford", "Focus", 2018, 3.6);
+        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
         //System.out.println(knurmobil);
@@ -85,5 +88,25 @@ public class Main {
         System.out.println(me.car);
         System.out.println("The buyer named" + carBuyer.firstName + " paid me and still has" + carBuyer.cash + "PLN");
 
+        String[] names = {"Kasia", "Knur", "Janusz"};
+        for (String name : names) {
+            System.out.println("my name is " + name);
+        }
+/*
+        names = new String[4];
+
+        Set<Object> humans = new TreeSet<>();
+
+        humans.add(me);
+        humans.add(knur);
+        humans.add(me);
+        humans.add(carBuyer);
+        humans.add(new Animal("dog"));
+*/
+
+
+       Connector.connect();
+
     }
+
 }
