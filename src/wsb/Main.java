@@ -12,8 +12,6 @@ import java.util.*;
 
 public class Main {
 
-
-
     public static void main(String[] args) throws Exception {
         //lesson1
 
@@ -41,9 +39,10 @@ public class Main {
 
         //task3 Salary
         me.setSalary(10000.00);
-        System.out.println("I earn " +me.getSalary());
-        System.out.println("I have " + me.cash + "PLN");
+        System.out.println("I earn " +me.getSalary() +"PLN");
+        //System.out.println("I have " + me.cash + "PLN");
         me.increaseSalary(1230.00);
+        //System.out.println("I got a raise of " +me.increaseSalary() +"PLN");
 
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
@@ -51,7 +50,7 @@ public class Main {
         knur.pet = cat;
         //knur.pet = me.pet;
         knur.mobile = knurofon;
-        System.out.println("Knur has " + knur.cash + "PLN");
+       // System.out.println("Knur has " + knur.cash + "PLN");
 
        // knur.pet.feed();
        // System.out.println(cat);
@@ -60,7 +59,8 @@ public class Main {
         knur.setSalary(5000.00);
         System.out.println("Knur earns " +knur.getSalary());
         knur.increaseSalary(1000.00);
-        //System.out.println("Knur got a raise of  " +knur.increaseSalary());
+       // System.out.println("Knur got a raise of  " +knur.increaseSalary());
+
         //task2 Create new car in Main and assign it to human that you should already have.
 
         Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6);
