@@ -40,8 +40,8 @@ public class Human extends Animal {
             System.out.println("you don't get paid");
             return;
         }
-        System.out.println("remeber to take annex to agreement off Ms. Joanna from the office");
         System.out.println("You got a raise - info to accounting system");
+        System.out.println("remeber to take annex to agreement off Ms. Joanna from the office");
         System.out.println("Public Health Insurance and Tax Office got to know of your salary change and there is no use to hide your real income.");
         this.salary = salary;
     }
