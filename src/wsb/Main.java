@@ -40,7 +40,7 @@ public class Main {
         //task3 Salary
         me.setSalary(10000.00);
         System.out.println("I earn " +me.getSalary() +"PLN");
-        //System.out.println("I have " + me.cash + "PLN");
+        System.out.println("I have " + me.cash + "PLN");
         me.increaseSalary(1230.00);
         //System.out.println("I got a raise of " +me.increaseSalary() +"PLN");
 
@@ -50,7 +50,7 @@ public class Main {
         knur.pet = cat;
         //knur.pet = me.pet;
         knur.mobile = knurofon;
-       // System.out.println("Knur has " + knur.cash + "PLN");
+        System.out.println("Knur has " + knur.cash + "PLN");
 
        // knur.pet.feed();
        // System.out.println(cat);
