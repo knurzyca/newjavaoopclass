@@ -41,8 +41,9 @@ public class Main {
 
         //task3 Salary
         me.setSalary(10000.00);
+        System.out.println("I earn " +me.getSalary());
         System.out.println("I have " + me.cash + "PLN");
-
+        me.increaseSalary(1230.00);
 
         Human knur = new Human();
         knur.firstName = "Knuroslaw";
@@ -57,8 +58,9 @@ public class Main {
 
         //task3 Salry
         knur.setSalary(5000.00);
-
-
+        System.out.println("Knur earns " +knur.getSalary());
+        knur.increaseSalary(1000.00);
+        //System.out.println("Knur got a raise of  " +knur.increaseSalary());
         //task2 Create new car in Main and assign it to human that you should already have.
 
         Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6);

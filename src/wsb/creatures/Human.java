@@ -62,6 +62,9 @@ public class Human extends Animal {
     public String toString() {
         return this.firstName + " " + this.lastName;
     }
+
+    public void increaseSalary(double v) {
+    }
     /*public Double valueofCars(){
         Double value = 0.0;
         for (Car car :garage){
