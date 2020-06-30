@@ -41,7 +41,7 @@ public class Animal implements Feedable {
             }
         }
 
-  /* private void getWeight() {
+  public void getWeight() {
 
         if (this.species.equals("dog"))
             weight = 5.4;
@@ -51,7 +51,6 @@ public class Animal implements Feedable {
             weight = 0.0;
     }
 
-   */
 
     //task 1.4 add void feed()
     public void feed() {
@@ -67,8 +66,8 @@ public class Animal implements Feedable {
         }
 
 
-    Double getWeight() {
-        return weight;}
+    //Double getWeight() {
+      //  return weight;}
 
         // task 1.4. add void takeForAWalk()
         // When you feed an animal it should gain weight, when you take it for a walk it should loose weight.
@@ -88,7 +87,6 @@ public class Animal implements Feedable {
                 System.out.println(name + " starved to death");
             }
         }
-
 
         protected void kill() {
             System.out.println(" Animal died");

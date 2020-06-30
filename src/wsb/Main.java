@@ -40,7 +40,8 @@ public class Main {
         //task3 Salary
         me.setSalary(10000.00);
         System.out.println("I earn " +me.getSalary() +"PLN");
-        System.out.println("I have " + me.cash + "PLN");
+        me.setCash(100000.00);
+        System.out.println("I have " + me.cash + "PLN of extra cash");
         me.increaseSalary(1230.00);
         //System.out.println("I got a raise of " +me.increaseSalary() +"PLN");
 
@@ -50,7 +51,8 @@ public class Main {
         knur.pet = cat;
         //knur.pet = me.pet;
         knur.mobile = knurofon;
-        System.out.println("Knur has " + knur.cash + "PLN");
+        knur.setCash(100000.00);
+        System.out.println("Knur has " + knur.cash + "PLN of extra cash");
 
        // knur.pet.feed();
        // System.out.println(cat);
@@ -62,11 +64,11 @@ public class Main {
        // System.out.println("Knur got a raise of  " +knur.increaseSalary());
 
         //task2 Create new car in Main and assign it to human that you should already have.
-
+//task 5 car chceck if you can buy it
         Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
-        //System.out.println(knurmobil);
+        System.out.println(knurmobil);
         System.out.println("Knur has a car " +knur.car.model);
         System.out.println(" with plates " + knur.car.plates);
 
