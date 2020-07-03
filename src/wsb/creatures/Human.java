@@ -4,6 +4,8 @@ import wsb.devices.Car;
 import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
+import java.util.Arrays;
+
 public class Human extends Animal {
     private static final Double DEFAULT_FEED_WEIGHT = 1.0;
     public String firstName;
@@ -73,10 +75,6 @@ public class Human extends Animal {
 
      */
 
-    public String toString() {
-        return this.firstName + " " + this.lastName;
-    }
-
     public void increaseSalary(double v) {
     }
 
@@ -103,5 +101,21 @@ public class Human extends Animal {
         } else {
             System.out.println("you need more money to buy it - find a new job or ask for the salary rise");
         }
+    }
+//tsk 7 test
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", weight=" + weight +
+                ", pet=" + pet +
+                ", farm=" + Arrays.toString (farm) +
+                ", mobile=" + mobile +
+                ", car=" + car +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", cash=" + cash +
+                ", salary=" + salary +
+                '}';
     }
 }

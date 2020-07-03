@@ -3,18 +3,20 @@ package wsb.devices;
 import wsb.Saleable;
 import wsb.creatures.Human;
 
-public abstract class Device implements Saleable {
-        final public String producer;
-        final public String model;
-        int value;
+public abstract class Device<price, value> implements Saleable {
+    final public String producer;
+    final public String model;
+    double price;
+    int yearOfProduction;
 
-    public Device(String producer, String model) {
-        this.producer = producer;
-        this.model = model;
-        this.value = value;
+    public Device(String producer, String model, double price, int yearOfProduction) {
+        this.producer=producer;
+        this.model=model;
+        this.price=price;
+        this.yearOfProduction=yearOfProduction;
     }
 
-   public abstract void turnOn();
+    public abstract void turnOn();
 
     public String getModel(){
         return this.model;
@@ -22,10 +24,6 @@ public abstract class Device implements Saleable {
 
     @Override public void sell(){
         System.out.println("already sold");
-    }
-
-    public int getValue() {
-        return this.value;
     }
 
     @Override

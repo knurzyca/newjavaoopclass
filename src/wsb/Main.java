@@ -21,8 +21,8 @@ public class Main {
         Animal cat = new Animal("cat");
         cat.name = "Kulek";
 
-        Phone szajsung = new Phone("Samsung", "10", 5.0);
-        Phone knurofon = new Phone("Samsung", "12", 7.0);
+        Phone szajsung = new Phone("Samsung", "s20", 5000.00, 2019);
+        Phone knurofon = new Phone("Samsung", "S10", 3000.00, 2020);
 
         Human me = new Human(30);
         me.firstName = "Kasia";
@@ -111,6 +111,7 @@ public class Main {
         humans.add(carBuyer);
         humans.add(new Animal("dog"));
 */
+        //test task 7
 
 
        Connector.connect();
