@@ -2,7 +2,7 @@ package wsb.devices;
 
 public class DieselCar extends Car {
     public DieselCar(String producer, String model) {
-        super(producer, model, 2020, 114.0);
+        super(producer, model, 2020, 114.0, 3000);
     }
     /*@Override
     public void refuel() {

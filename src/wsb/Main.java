@@ -24,7 +24,7 @@ public class Main {
         Phone szajsung = new Phone("Samsung", "10", 5.0);
         Phone knurofon = new Phone("Samsung", "12", 7.0);
 
-        Human me = new Human();
+        Human me = new Human(30);
         me.firstName = "Kasia";
         me.lastName = "Pogo";
         me.pet = dog;
@@ -45,7 +45,7 @@ public class Main {
         me.increaseSalary(1230.00);
         //System.out.println("I got a raise of " +me.increaseSalary() +"PLN");
 
-        Human knur = new Human();
+        Human knur = new Human(7);
         knur.firstName = "Knuroslaw";
         knur.lastName = "Knurski";
         knur.pet = cat;
@@ -65,7 +65,7 @@ public class Main {
 
         //task2 Create new car in Main and assign it to human that you should already have.
 //task 5 car chceck if you can buy it
-        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6);
+        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6, 3000);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
         System.out.println(knurmobil);
@@ -77,7 +77,7 @@ public class Main {
        // System.out.println("We have Tesla with plates " +electro.plates);
 
 
-       Car cityCar = new Car("cooper", "mini", 2016, 2.2);
+       Car cityCar = new Car("cooper", "mini", 2016, 2.2, 3000);
         cityCar.plates = "PO G0";
         me.car = cityCar;
         System.out.println( " Kasia Pogo drives " +cityCar.producer);
@@ -85,7 +85,7 @@ public class Main {
 
 
        //task buy sell
-        Human carBuyer = new Human();
+        Human carBuyer = new Human(5);
         carBuyer.firstName = "Janusz";
         carBuyer.lastName = "Nosacz";
         me.car.sell(carBuyer, me, 1234.00);
