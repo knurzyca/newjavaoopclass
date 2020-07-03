@@ -92,17 +92,5 @@ public class Human extends Animal {
             }
         }
     } */
-    public Car getCar() {
-        return car;
-    }
 
-    public void setVehicle(Car vehicle) {
-        if (salary > getCar().price) {
-            System.out.println("bought a car");
-        } else if (salary > (getCar().price / 12)) {
-            System.out.println("get credit to buy a car");
-        } else {
-            System.out.println("you need more money to buy it - find a new job or ask for the salary rise");
-        }
-    }
 }
