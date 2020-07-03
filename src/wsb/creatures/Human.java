@@ -96,7 +96,7 @@ public class Human extends Animal {
         return car;
     }
 
-    public void setVehicle(Car vehicle) {
+    public void setCar(Car car) {
         if (salary > getCar().price) {
             System.out.println("bought a car");
         } else if (salary > (getCar().price / 12)) {
