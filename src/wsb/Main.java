@@ -4,9 +4,9 @@ import wsb.creatures.Animal;
 import wsb.creatures.Human;
 import wsb.database.Connector;
 import wsb.devices.Car;
-import wsb.devices.ElectricCar;
+import wsb.devices.CompareCars;
 import wsb.devices.Phone;
-import wsb.database.Connector;
+
 
 import java.util.*;
 
@@ -65,32 +65,36 @@ public class Main {
 
         //task2 Create new car in Main and assign it to human that you should already have.
 //task 5 car chceck if you can buy it
-        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6, 3000);
+        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6, 73000);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
         System.out.println(knurmobil);
         System.out.println("Knur has a car " +knur.car.model);
         System.out.println(" with plates " + knur.car.plates);
 
-        //Car electro = new ElectricCar("Tesla", "X", 2020,6.6.);
-       // electro.plates = "EL ZA";
-       // System.out.println("We have Tesla with plates " +electro.plates);
 
-
-       Car cityCar = new Car("cooper", "mini", 2016, 2.2, 3000);
+       Car cityCar = new Car("cooper", "mini", 2016, 2.2, 93000);
         cityCar.plates = "PO G0";
         me.car = cityCar;
         System.out.println( " Kasia Pogo drives " +cityCar.producer);
         System.out.println(" with plates "+ cityCar.plates);
 
 
-       //task buy sell
+        Car electro = new Car("Tesla", "X", 2020, 6.6, 300000);
+        electro.plates = "EL ZA";
+        System.out.println("We have Tesla with plates " +electro.plates);
+
+        //task buy sell
         Human carBuyer = new Human(5);
         carBuyer.firstName = "Janusz";
         carBuyer.lastName = "Nosacz";
         me.car.sell(carBuyer, me, 1234.00);
         System.out.println(me.car);
         System.out.println("The buyer named" + carBuyer.firstName + " paid me and still has" + carBuyer.cash + "PLN");
+
+        CompareCars compare = new CompareCars();
+        compare.compareCars(cityCar, knurmobil);
+        compare.compareCars(cityCar, electro);
 
         String[] names = {"Kasia", "Knur", "Janusz"};
         for (String name : names) {
