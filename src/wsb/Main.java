@@ -65,7 +65,7 @@ public class Main {
 
         //task2 Create new car in Main and assign it to human that you should already have.
 //task 5 car chceck if you can buy it
-        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6, 73000);
+        Car knurmobil = new Car ("Focus", "Ford", 2018, 3.6, 93000);
         knurmobil.plates = "WE 1234A";
         knur.car = knurmobil;
         System.out.println(knurmobil);
