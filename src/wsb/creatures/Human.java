@@ -13,7 +13,7 @@ public class Human extends Animal {
     public Animal[] farm;
     //public FarmAnimal[] farm;
     public Phone mobile;
-    public Car car; //task 5- cant change to private - car not visible in main class
+    public Car car; //tfor task 5
     private static int DEFAULT_FARM_SIZE = 3;
     protected String phoneNumber;
     public Double cash = 300.0;
@@ -92,5 +92,17 @@ public class Human extends Animal {
             }
         }
     } */
+    public Car getCar() {
+        return car;
+    }
 
+    public void setVehicle(Car vehicle) {
+        if (salary > getCar().price) {
+            System.out.println("bought a car");
+        } else if (salary > (getCar().price / 12)) {
+            System.out.println("get credit to buy a car");
+        } else {
+            System.out.println("you need more money to buy it - find a new job or ask for the salary rise");
+        }
+    }
 }
