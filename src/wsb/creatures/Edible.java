@@ -1,6 +1,4 @@
-package wsb;
-
-import wsb.creatures.Animal;
+package wsb.creatures;
 
 public interface Edible {
     void eat(Animal animal) throws Exception;

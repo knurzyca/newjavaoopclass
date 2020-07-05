@@ -27,6 +27,7 @@ public class Main {
         Human me = new Human(30);
         me.firstName = "Kasia";
         me.lastName = "Pogo";
+        me.weight = 60;
         me.pet = dog;
         me.mobile = szajsung;
        // System.out.println(dog);
@@ -40,14 +41,17 @@ public class Main {
         //task3 Salary
         me.setSalary(10000.00);
         System.out.println("I earn " +me.getSalary() +"PLN");
-        me.setCash(100000.00);
-        System.out.println("I have " + me.cash + "PLN of extra cash");
         me.increaseSalary(1230.00);
         //System.out.println("I got a raise of " +me.increaseSalary() +"PLN");
+
+        //task 8 cash
+        me.setCash(100000.00);
+        System.out.println("I have " + me.cash + "PLN of extra cash");
 
         Human knur = new Human(7);
         knur.firstName = "Knuroslaw";
         knur.lastName = "Knurski";
+        knur.weight = 90;
         knur.pet = cat;
         //knur.pet = me.pet;
         knur.mobile = knurofon;

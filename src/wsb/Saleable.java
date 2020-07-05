@@ -3,7 +3,8 @@ package wsb;
 import wsb.creatures.Human;
 
 public interface Saleable {
-    void sell();
+    default boolean sell(Human buyer, Human seller) throws Exception {
+        return false;
+    }
 
-    void sell(Human buyer, Human seller, Double price) throws Exception;
 }

@@ -20,7 +20,7 @@ public class Car {
         this.enginepower = enginepower;
         this.price = price;
 
-       // System.out.println( " A car with plates " + plates);
+        System.out.println( " A car with plates " + plates);
 
 
     }
@@ -32,12 +32,12 @@ public class Car {
             carBuyer.cash -= price;
             me.car = null;
             me.cash += price;
-            System.out.println(me.firstName + " sell a car (" + this.model + ") to " + carBuyer + " for " + price);
+            System.out.println(me.firstName + " sell a car " + this.model + " to " + carBuyer.name );
+            return true;
         } else {
             throw new Exception("sorry, your funds are not enough");
+            return false;
         }
     }
 
-
-    // public void refuel();
 }

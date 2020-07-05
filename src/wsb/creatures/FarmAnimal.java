@@ -1,11 +1,10 @@
 package wsb.creatures;
 
-import wsb.Edible;
-
 public class FarmAnimal extends Animal implements Edible{
 
-    public FarmAnimal(String species) {
-        super(species);
+
+    public FarmAnimal(String name, String species, Double weight, Double price) {
+        super (name, species, weight, price);
     }
 
     @Override

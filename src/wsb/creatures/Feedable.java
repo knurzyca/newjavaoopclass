@@ -1,10 +1,8 @@
 package wsb.creatures;
 
 public interface Feedable {
-   public void feed();
-   public void feed(Double food);
+   Double feed();
 
-    //void feed() throws Exception;
-    //void feed(foodWeight)  throws Exception; {
+  void feedd(Double foodWeight);
 
     }

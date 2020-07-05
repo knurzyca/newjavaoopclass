@@ -1,31 +1,32 @@
 package wsb.creatures;
 
 import wsb.devices.Car;
-import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
 import java.util.Arrays;
 
 public class Human extends Animal {
-    private static final Double DEFAULT_FEED_WEIGHT = 1.0;
+  //  private static final Double DEFAULT_FEED_WEIGHT = 1.0;
     public String firstName;
     public String lastName;
-    double weight;
+    public double weight;
     public Animal pet; //task 1.1
     public Animal[] farm;
     //public FarmAnimal[] farm;
     public Phone mobile;
     public Car car; //tfor task 5
-    private static int DEFAULT_FARM_SIZE = 3;
+   // private static int DEFAULT_FARM_SIZE = 3;
     protected String phoneNumber;
     public Double cash = 300.0;
     private Double salary;
 
 
-    public Human(Integer farmSize) {
+    /*public Human(Integer farmSize) {
         super("homo sapiens");
         farm = new FarmAnimal[farmSize];
     }
+
+     */
 
    /* public Human() {
         super("homo sapiens");
@@ -35,13 +36,16 @@ public class Human extends Animal {
 
     */
 
-    public Human(String firstName, String lastName, double weight, Animal pet, Car car) {
+    public Human(String firstName, String lastName, double weight, Animal pet, Car car, Phone mobile, double salary, Double cash) {
         super("homo sapiens");
         this.firstName = firstName;
         this.lastName = lastName;
         this.weight = weight;
         this.pet = pet;
         this.car = car;
+        this.mobile = mobile;
+        this.salary = salary;
+        this.cash = cash;
     }
 
     public Double getSalary() {
@@ -75,10 +79,18 @@ public class Human extends Animal {
 
      */
 
-    public void increaseSalary(double v) {
+    public void increaseSalary(double salary) { this.salary = salary;
     }
-
-    public void setCash(double v) {
+    public Double getCash() {
+        return cash;
+    }
+    public void setCash(double cash) { this.cash = cash;
+    }
+    public void moreCash(Double cash) {
+        this.cash += cash;
+    }
+    public void lessCash(Double cash) {
+        this.cash += cash;
     }
 
     /*public Double valueofCars(){
@@ -102,7 +114,25 @@ public class Human extends Animal {
             System.out.println("you need more money to buy it - find a new job or ask for the salary rise");
         }
     }
-//tsk 7 test
+
+    //TASK8
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
+    }
+
+    public Phone getPhone() {
+        return mobile;
+    }
+
+    public void setPhone(Phone mobile) {
+        this.mobile = mobile;
+    }
+
+    //tsk 7 test
     @Override
     public String toString() {
         return "Human{" +

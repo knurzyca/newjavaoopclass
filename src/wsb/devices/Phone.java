@@ -1,5 +1,7 @@
 package wsb.devices;
 
+import wsb.creatures.Human;
+
 import static java.lang.System.out;
 
 public class Phone extends Device {
@@ -23,9 +25,21 @@ public class Phone extends Device {
     }
 
     public void installAnApp(String[] apps) {
-        for (String app : apps) {
-            installAnApp(app);
-        }
+        for (String app : apps) installAnApp (app);
     }
 
+    @Override
+    public boolean sell(Human buyer, Human seller) throws Exception {
+        if (seller.getPhone().price<= buyer.getCash()) {
+            buyer.lessCash(seller.getPhone().price);
+            seller.moreCash(seller.getPhone().price);
+            buyer.setPhone(seller.getPhone());
+            seller.setPhone(null);
+            System.out.println("your phone was sold to" + seller.toString());
+            return true;
+        } else {
+            System.out.println("Sorry, not enough cash to buy ohone");
+            return false;
+        }
+    }
 }
